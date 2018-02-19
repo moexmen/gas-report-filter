@@ -36,3 +36,5 @@ A whitelist file has to be given, the format is given below.
   ]
 }
 ```
+
+For `code`, copy whatever that comes after `>` in the Jenkins test result. You'll also need to make sure that these characters: `<, >, &, ' and "` are escaped.
