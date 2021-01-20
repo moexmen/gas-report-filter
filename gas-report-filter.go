@@ -99,7 +99,7 @@ func retrieveCode(output string) string {
 /* #nosec */
 func isInWhitelist(whitelist Whitelist, file string, code string) bool {
 	for i := range whitelist.Issues {
-		if whitelist.Issues[i].File == file && whitelist.Issues[i].Code == code {
+		if whitelist.Issues[i].File == file && strings.Contains(whitelist.Issues[i].Code, code) {
 			return true
 		}
 	}
